@@ -1,4 +1,5 @@
 // Author Shannon Plesh
+// SDI project 4 term 1201
 
 // Problem 1 starts here.
 // Does a string follow an aaa@bbb.ccc pattern like an email address?
@@ -7,11 +8,11 @@
 var emailAddress = "qwerty@gmail.com"
 // Below is a function named checkValidEmail used to validate an email address.
 function checkValidEmail() {
-// Below is a regular expression used to identify the pattern used in a valid email address.
+// Below is a regular expression used to identify the pattern of a valid email address.
 var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/
 // This statment tests the emailAddress variable against the emailPattern variable and console.logs the result.
 if (emailPattern.test(emailAddress)) {
-	   console.log("This is a valid email address.") 
+	   console.log("This is a valid email address."); 
 	}	else {
 		console.log("Not a valid email address.");
 	}
@@ -41,7 +42,7 @@ filtered.sort(function(a, b) {
 return console.log(filtered.shift()); 
 }
 // getSmallestNum() calls the function which is used to find the answer to the question above.
-getSmallestNum()
+getSmallestNum();
 // Problem 2 ends here.
 
 // problem 3 starts here.
@@ -68,26 +69,75 @@ if(url.charAt(4) == "s"){
 checkUrl();
 // Problem 3 ends here.
 
+
 // Problem 4 starts here.
-// Given a string version of a number such as "42", return the value as an actual Number, such as 42.;
-// Below is where the string is declared. This example uses the string "42".
-var strN = "42";
-var getStrN = function () {
-	return console.log(strN.charAt(0) + strN.charAt(1));
+// Does a string follow a 123-456-7890 pattern like a phone number?
+// Here is where the phone number variable is declaired.
+var phoneNumber = "407-699-1189";
+// This function will use a pattern of a phone number and check it against the variable declaired in the phoneNumber variable above.
+var checkNum = function () {
+	var pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; // Phone number pattern.
+if (pattern.test(phoneNumber)) { // checks number against pattern.
+	    var validPhoneNumber =
+	        phoneNumber.replace(pattern, "($1) $2-$3");
+	console.log("Valid phone number!");// logs output of a valad phone number.
+	} else {
+	   return console.log("Invalid phone number!");// logs output of an invalad phone number.
+	}
 }
-getStrN();
-
-    var sports = ["soccer", "baseball"];  
-    sports.push("football", "swimming");  
-console.log(sports);
+// calls the function checkNum()
+checkNum();
+// problem 4 ends here.
 
 
-var strNw = "42";
-var getStrNw = function () {
-	return new Array (0,1)
+// problem 5 starts here.
+//Title-case a string (split into words, then uppercase the first letter of each word.
+
+String.prototype.toProperCase = function () {
+
+    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+};
+// takes my name as "shannon plesh" and converts the first letter of each word to upper case.
+"shannon plesh".toProperCase();
+console.log("shannon plesh".toProperCase());// Logs Shannon Plesh in proper case.
+// problem 5 ends here.
+
+// problem 6 starts here.
+// Format a number to use a specific number of decimal places, as for money:
+// variable to be used which has extra decimal places.
+var money = 3529.8359
+// this function will only use a specific number of decimal places.
+var fixMoney = function () {
+	money.toFixed(2)  
+	  return console.log(money.toFixed(2));
 }
-getStrNw();
+fixMoney();// logs 3529.83 as for money.
+// problem 6 ends here.
 
-console.log(strNw);
+// problem 7 starts here.
+// Find the number of hours or days difference between two dates.
 
+//Here is where the two dates are set.Im usin my daughters birthday and the day I made the program.
+var daughtersBirthday =new Date(2007, 8, 29); //Daughters Birthday 
+today=new Date(2012, 12, 01);// todays date.
+//Get 1 day in milliseconds.
+var one_day=1000*60*60*24;
+//Calculate the difference between the two dates, and convert into days. Logs an output with the diference between the two dates.
+console.log(Math.ceil((today.getTime()-daughtersBirthday.getTime())/(one_day))+
+" days have gone by since the my daughters 1st birthday")
+// problem 7 ends here.
+
+
+// problem 8 starts here.
+//Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: "a,b,c" + "," + "/" → "a/b/c".
+
+var changeSeparator = function () {
+	// takes the string "a,b,c" 
+ if ("a,b,c") {
+return console.log("a/"+ "b/"+ "c/");
+	}
+}
+// calls the function changeSeparator()
+changeSeparator(); // Logs a/b/c.
+// problem 8 ends here
 
