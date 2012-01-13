@@ -25,7 +25,7 @@ checkValidEmail();
 // Problem 2 starts here.
 // Find the smallest value in an array that is greater than a given number.
 // In this example, my given number will be 10, therefore the smallest number greater than 10 in the array below is 19.
-// This function finds and removes numbers from the array that are smaller than the given number which is 10.
+// This function finds and removes numbers from the array that are smaller than the given number which is 10 in my example below.
 function getSmallestNum() {
 function isBigEnough(element, index, array) {  
       return (element >= 10);  
@@ -123,8 +123,11 @@ today=new Date(2012, 12, 01);// todays date.
 //Get 1 day in milliseconds.
 var one_day=1000*60*60*24;
 //Calculate the difference between the two dates, and convert into days. Logs an output with the diference between the two dates.
-console.log(Math.ceil((today.getTime()-daughtersBirthday.getTime())/(one_day))+
+function getDays() {console.log(Math.ceil((today.getTime()-daughtersBirthday.getTime())/(one_day))+
 " days have gone by since the my daughters 1st birthday")
+}
+// calls the function that calculates the number of days.
+getDays();
 // problem 7 ends here.
 
 
