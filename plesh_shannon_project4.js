@@ -1,5 +1,5 @@
 // Author Shannon Plesh
-// SDI project 4 term 1201
+// SDI project 4 term 1203
 
 // Problem 1 starts here.
 // Does a string follow an aaa@bbb.ccc pattern like an email address?
