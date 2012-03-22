@@ -71,9 +71,9 @@ if(url.charAt(4) == "s"){
 // Problem 4 starts here.
 // Does a string follow a 123-456-7890 pattern like a phone number?
 // Here is where the phone number variable is declaired.
-var phoneNumber = "407-699-1189";
+
 // This function will use a pattern of a phone number and check it against the variable declaired in the phoneNumber variable above.
-var checkNum = function () {
+var checkNum = function (testNumber) {var phoneNumber = testNumber;
 	var pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; // Phone number pattern.
 if (pattern.test(phoneNumber)) { // checks number against pattern.
 	    var validPhoneNumber =
@@ -84,7 +84,7 @@ if (pattern.test(phoneNumber)) { // checks number against pattern.
 	}
 }
 // calls the function checkNum()
-checkNum();
+
 // problem 4 ends here.
 
 
@@ -143,10 +143,21 @@ changeSeparator(); // Logs a/b/c.
 // problem 8 ends here
 
 
-// Function calls
+// Function calls for problems 1-8
+
 // Problem 1
 checkValidEmail("qwerty@gmail.com");
 // Problem 2
 getSmallestNum();
 // Problem 3
 checkUrl("https://www.google.com/");
+// Problem 4
+checkNum("407-699-1189");
+// Problem 5
+
+// Problem 6
+
+// Problem 7
+
+// Problem 8
+
