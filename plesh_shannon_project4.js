@@ -91,13 +91,17 @@ if (pattern.test(phoneNumber)) { // checks number against pattern.
 // problem 5 starts here.
 //Title-case a string (split into words, then uppercase the first letter of each word.
 
+function fixCase(fixThis) {
+	
+
 String.prototype.toProperCase = function () {
 
     return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 };
 // takes my name as "shannon plesh" and converts the first letter of each word to upper case.
-"shannon plesh".toProperCase();
+fixThis.toProperCase();
 console.log("shannon plesh".toProperCase());// Logs Shannon Plesh in proper case.
+}
 // problem 5 ends here.
 
 // problem 6 starts here.
@@ -154,7 +158,7 @@ checkUrl("https://www.google.com/");
 // Problem 4
 checkNum("407-699-1189");
 // Problem 5
-
+fixCase("shannon plesh");
 // Problem 6
 
 // Problem 7
