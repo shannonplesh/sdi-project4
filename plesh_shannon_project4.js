@@ -16,7 +16,7 @@ function checkValidEmail(emailToCheck) {
         console.log("Not a valid email address.");
     }
 }
-// checkValidEmail("qwerty@gmail.com") calls the function which will verify the email address in parentheses is correct.
+// checkValidEmail("qwerty@gmail.com") at bottom will call the function and verify if the email address in parentheses is correct.
 // Problem 1 ends here.
 
 // Problem 2 starts here.
@@ -40,9 +40,10 @@ function getSmallestNum() {
 }
 // getSmallestNum() calls the function which is used to find the answer to the question above.
 // Problem 2 ends here.
+
 // problem 3 starts here.
 // Is the string a URL? (Does it start with http: or https:?)
-// Below is the string used to identify the url to be checked.
+// testThisUrl is the string used to identify the url to be checked.
 // This is where the checkUrl function is decared.
 function checkUrl(testThisUrl) {
     var url = testThisUrl
@@ -81,7 +82,8 @@ var checkNum = function (testNumber) {
     // problem 4 ends here.
 
     // problem 5 starts here.
-    //Title-case a string (split into words, then uppercase the first letter of each word.
+    // Title-case a string (split into words, then uppercase the first letter of each word.
+		// fixCase function is declaired here.
 function fixCase(fixThis) {
 
 
@@ -93,7 +95,7 @@ function fixCase(fixThis) {
     };
     // takes my name as "shannon plesh" and converts the first letter of each word to upper case.
     fixThis.toProperCase();
-    console.log("shannon plesh".toProperCase()); // Logs Shannon Plesh in proper case.
+    console.log(fixThis.toProperCase()); // Logs Shannon Plesh in proper case.
 }
 // problem 5 ends here.
 // problem 6 starts here.
