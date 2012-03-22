@@ -5,9 +5,9 @@
 // Does a string follow an aaa@bbb.ccc pattern like an email address?
 // The email address string to be tested here will be "qwerty@gmail.com".
 // Below is where the email address is defined as a variable.
-var emailAddress = "qwerty@gmail.com"
 // Below is a function named checkValidEmail used to validate an email address.
-function checkValidEmail() {
+function checkValidEmail(emailToCheck) {var emailAddress = emailToCheck
+
 // Below is a regular expression used to identify the pattern of a valid email address.
 var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/
 // This statment tests the emailAddress variable against the emailPattern variable and console.logs the result.
@@ -18,7 +18,7 @@ if (emailPattern.test(emailAddress)) {
 	}
 }
 // checkValidEmail() calls the function which will verify the email emailAddress variable defined above.
-checkValidEmail();
+checkValidEmail("qwerty@gmail.com");
 // Problem 1 ends here.
 
 
