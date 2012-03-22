@@ -107,29 +107,32 @@ console.log("shannon plesh".toProperCase());// Logs Shannon Plesh in proper case
 // problem 6 starts here.
 // Format a number to use a specific number of decimal places, as for money:
 // variable to be used which has extra decimal places.
-var money = 3529.8359
+
 // this function will only use a specific number of decimal places.
-var fixMoney = function () {
+function fixMoney(moneyToTest)  {var money = moneyToTest
 	money.toFixed(2)  
 	  return console.log(money.toFixed(2));
 }
-fixMoney();// logs 3529.83 as for money.
+// logs 3529.83 as for money.
 // problem 6 ends here.
 
 // problem 7 starts here.
 // Find the number of hours or days difference between two dates.
 
 //Here is where the two dates are set.Im usin my daughters birthday and the day I made the program.
-var daughtersBirthday =new Date(2007, 8, 29); //Daughters Birthday 
-today=new Date(2012, 12, 01);// todays date.
+ //Daughters Birthday 
+// todays date.
 //Get 1 day in milliseconds.
-var one_day=1000*60*60*24;
+
 //Calculate the difference between the two dates, and convert into days. Logs an output with the diference between the two dates.
-function getDays() {console.log(Math.ceil((today.getTime()-daughtersBirthday.getTime())/(one_day))+
-" days have gone by since the my daughters 1st birthday")
+function getDays(testDate) {var daughtersBirthday = testDate;
+today=new Date(2012, 12, 01);
+var one_day=1000*60*60*24;
+console.log(Math.ceil((today.getTime()-daughtersBirthday.getTime())/(one_day))+
+" days have gone by since " + testDate)
 }
 // calls the function that calculates the number of days.
-getDays();
+
 // problem 7 ends here.
 
 
@@ -160,8 +163,8 @@ checkNum("407-699-1189");
 // Problem 5
 fixCase("shannon plesh");
 // Problem 6
-
+fixMoney(3529.8359);
 // Problem 7
-
+getDays(new Date(2007, 8, 29));
 // Problem 8
 
