@@ -4,10 +4,9 @@
 // Problem 1 starts here.
 // Does a string follow an aaa@bbb.ccc pattern like an email address?
 // The email address string to be tested here will be "qwerty@gmail.com".
-// Below is where the email address is defined as a variable.
+// The email address is defined as emailToCheck.
 // Below is a function named checkValidEmail used to validate an email address.
 function checkValidEmail(emailToCheck) {var emailAddress = emailToCheck
-
 // Below is a regular expression used to identify the pattern of a valid email address.
 var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/
 // This statment tests the emailAddress variable against the emailPattern variable and console.logs the result.
@@ -17,8 +16,8 @@ if (emailPattern.test(emailAddress)) {
 		console.log("Not a valid email address.");
 	}
 }
-// checkValidEmail() calls the function which will verify the email emailAddress variable defined above.
-checkValidEmail("qwerty@gmail.com");
+// checkValidEmail("qwerty@gmail.com") calls the function which will verify the email address in parentheses is correct.
+
 // Problem 1 ends here.
 
 
@@ -42,15 +41,14 @@ filtered.sort(function(a, b) {
 return console.log(filtered.shift()); 
 }
 // getSmallestNum() calls the function which is used to find the answer to the question above.
-getSmallestNum();
 // Problem 2 ends here.
 
 // problem 3 starts here.
 // Is the string a URL? (Does it start with http: or https:?)
 // Below is the string used to identify the url to be checked.
-var url = "https://www.google.com/"
+
 // This is where the checkUrl function is decared.
-var checkUrl = function () {
+function checkUrl(testThisUrl)   {var url = testThisUrl
 // Below is a regular expression used to identify the pattern used in a valid url.
 var re = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
 // This will test the url and return true if the answer is yes, or false if the answer is no.
@@ -66,7 +64,7 @@ if(url.charAt(4) == "s"){
 	}
 }
 // checkUrl() is used to call the function that checks to see if a url is valid and weather it is http or https.
-checkUrl();
+
 // Problem 3 ends here.
 
 
@@ -144,3 +142,11 @@ return console.log("a/"+ "b/"+ "c/");
 changeSeparator(); // Logs a/b/c.
 // problem 8 ends here
 
+
+// Function calls
+// Problem 1
+checkValidEmail("qwerty@gmail.com");
+// Problem 2
+getSmallestNum();
+// Problem 3
+checkUrl("https://www.google.com/");
