@@ -154,3 +154,24 @@ fixMoney(3529.8359);
 getDays(new Date(2007, 8, 29));
 // Problem 8
 changeSeparator("a,b,c");
+
+// testing module pattern
+
+var MODULE = (function () {
+	var my = {},
+		privateVariable = 699-234-1234;
+	
+	function privateMethod() {
+		// ...
+	}
+	
+	my.moduleProperty = 1;
+	my.moduleMethod = function getDays(testDate) {
+	    var daughtersBirthday = testDate;
+	    today = new Date(2012, 12, 01);
+	    var one_day = 1000 * 60 * 60 * 24;
+	    console.log(Math.ceil((today.getTime() - daughtersBirthday.getTime()) / (one_day)) + " days have gone by since " + testDate)
+	}
+	
+	return console.log(my.moduleProperty);
+}());
